@@ -33,7 +33,7 @@
 }
 .input {
 	border-color: #626c77;
-	padding-right: 3rem;
+	padding-right: 3rem !important;
 	padding: .706rem;
 	outline: none;
 	border-style: solid;

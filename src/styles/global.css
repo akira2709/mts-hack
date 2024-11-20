@@ -23,3 +23,6 @@
 	--toastify-color-progress-light: #ba9d5a !important;
 	--toastify-toast-min-height: 80px !important;
 }
+.Toastify__close-button {
+	color: white !important;
+}

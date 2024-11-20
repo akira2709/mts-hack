@@ -4,11 +4,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
 
-	const handleClick = () => {
-		toast("Успех!", {
-			position: "top-right"
+	const handleClick = () => toast("Успех!", {
+			position: "top-right",
+			autoClose: 5000
 		})
-	}
   return (
     <>
     	<ToastContainer/>

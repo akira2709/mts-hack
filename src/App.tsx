@@ -1,6 +1,7 @@
 import { toast, ToastContainer } from 'react-toastify'
 import "./styles/global.css"
 import "react-toastify/dist/ReactToastify.css";
+import { Login } from './login/Login';
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
   return (
     <>
     	<ToastContainer/>
-     <button onClick={handleClick}>click</button>
+     	<Login />
     </>
   )
 }

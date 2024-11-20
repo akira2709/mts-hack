@@ -10,6 +10,13 @@
 	font-family: "b-semi-bold";
 	src: url("/public/font/Benzin-Semibold.woff2");
 }
+@font-face {
+	font-family: "Stolzl";
+ 	font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/public/Stolzl/stolzl_regular.woff") format('woff2');
+}
 
 :root {
 	background: rgb(4, 5, 23);
@@ -25,4 +32,9 @@
 }
 .Toastify__close-button {
 	color: white !important;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }

@@ -1,0 +1,25 @@
+@font-face {
+	font-family: "b-reg";
+	src: url("/public/font/Benzin-Regular.woff2");
+}
+@font-face {
+	font-family: "b-bold";
+	src: url("/public/font/Benzin-Bold.woff2");
+}
+@font-face {
+	font-family: "b-semi-bold";
+	src: url("/public/font/Benzin-Semibold.woff2");
+}
+
+:root {
+	background: rgb(4, 5, 23);
+
+	--toastify-color-light: rgb(8, 13, 44) !important;
+	--toastify-toast-width: 320px !important;
+	--toastify-toast-height: 320px !important;
+	--toastify-font-family: "b-reg" !important;
+	--toastify-text-color-light: #fff !important;
+	--toastify-icon-color-info: #100 !important;
+	--toastify-color-progress-light: #ba9d5a !important;
+	--toastify-toast-min-height: 80px !important;
+}

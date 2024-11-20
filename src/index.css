@@ -51,8 +51,17 @@ table {
   src: url("/font/Benzin-Regular.woff2");
 }
 
+@font-face {
+  font-family: "Stolzl";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/font/stolzl_regular.woff") format('woff2');
+}
+
 :root {
   background: rgb(4, 5, 23);
+  color: white;
   --toastify-color-light: rgb(8, 13, 44) !important;
   --toastify-toast-width: 320px !important;
   --toastify-toast-height: 320px !important;
@@ -61,5 +70,6 @@ table {
   --toastify-icon-color-info: #100 !important;
   --toastify-color-progress-light: #ba9d5a !important;
   --toastify-toast-min-height: 80px !important;
+
   font-family: "b-reg", serif !important;
 }

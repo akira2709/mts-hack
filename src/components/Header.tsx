@@ -19,7 +19,7 @@ interface UserBase {
 const Header = () => {
   const [user, setUser] = useState<UserBase | null>(null);
 
-  const fetchEvents = () => {
+  const fetchProfile = () => {
     AxiosInstance.get('/profile')
       .then(response => {
         setUser(response.data as UserBase);
@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    fetchEvents();  // Загружаем события при первоначальной загрузке
+    fetchProfile();
   }, []);
 
 	const navigate = useNavigate()
@@ -39,12 +39,15 @@ const Header = () => {
             <img src='/img/logo.webp' alt='' className="h-[50px] cursor-pointer" onClick={() => navigate("/")}/>
             <nav className="hidden lg:flex space-x-6 mt-1">
               <a onClick={() => navigate("/")} className="text-[#BA9D5A] cursor-pointer">Главная</a>
-              <div className="text-gray-400">
-                Дней в ударном режиме: <span className="text-white">25</span>
-              </div>
+              {user && (
+                <div className="text-gray-400">
+                  Дней в ударном режиме: <span className="text-white">{user.streak_days}</span>
+                </div>
+              )}
             </nav>
           </div>
-          <a onClick={() => navigate(user? "/profile" : "/login")} className="flex items-center space-x-2 rounded mt-3 cursor-pointer">
+          <a onClick={() => navigate(user ? "/profile" : "/login")}
+             className="flex items-center space-x-2 rounded mt-3 cursor-pointer">
             <User size={20}/>
             {user? (
               <span>{user.username}</span>

@@ -52,19 +52,10 @@ function PriseSpin() {
 	const [el, setEl] = useState(0)
 	const prises = [
 		{
-			url: 'https://avatars.mds.yandex.net/i?id=33ffa6fe15c1a3e09d85b493a04f7bf5efe6dc4d-8428027-images-thumbs&n=13'
+			url: 'https://avatars.mds.yandex.net/i?id=6ea7679fcdb777d5aa39f8ae12554f1b65dc9702390ada50-12179187-images-thumbs&n=13'
 		},
 		{
-			url: 'https://avatars.mds.yandex.net/i?id=7bfe3c53578d92faafba5b92b3fb5704b14f6a58-10576312-images-thumbs&n=13'
-		},
-		{
-			url: 'https://avatars.mds.yandex.net/i?id=b74fac91b6da5ed22e1fa683648428f1d8964563-13201380-images-thumbs&n=13'
-		},
-		{
-			url: 'https://avatars.mds.yandex.net/i?id=1865fceb12351d29abe13a4f6906fa5a88dfa71d-10871820-images-thumbs&n=13'
-		},
-		{
-			url: 'https://avatars.mds.yandex.net/i?id=2c139aa26c0e8807ce7580cbb22e7ed2368cd0ad-9181326-images-thumbs&n=13'
+			url: 'https://avatars.mds.yandex.net/i?id=d81c850771129145379f12bce11198d5af2bfe28-4612093-images-thumbs&n=13'
 		},
 	]
 	useEffect(() => {

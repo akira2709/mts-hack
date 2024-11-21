@@ -2,10 +2,11 @@ import './index.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Profile from "./pages/Profile.tsx";
+import Stats from "./pages/Statistic.tsx";
 import Home from "./pages/Home.tsx";
 import {Login} from "./pages/Login/Login.tsx";
 import GuessMovie from "./pages/GuessMovie.tsx";
+import { Profile } from './pages/profile/Profile.tsx';
 
 
 const router = createBrowserRouter([
@@ -13,16 +14,20 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />
   },
-  {
-    path: "profile",
-    element: <Profile />
+	{
+		path: "/profile",
+		element: <Profile />,
+	},
+ 	{
+  		path: "/stats",
+		element: <Stats />
   },
   {
-    path: "login",
+    path: "/login",
     element: <Login />
   },
   {
-    path: "guess-movie",
+    path: "/guess-movie",
     element: <GuessMovie />
   }
 ]);

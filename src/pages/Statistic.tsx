@@ -2,7 +2,7 @@ import { Trophy, Film, Star, Clock } from 'lucide-react';
 import MovieCard from "../components/MovieCard.tsx";
 import Header from "../components/Header.tsx";
 
-const Profile = () => {
+const Stats = () => {
   const user = {
     name: "Иван Старабогов",
     avatar: "https://avatars.githubusercontent.com/u/105022062?v=4",
@@ -32,7 +32,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="px-[20px] lg:px-[80px]">
+    <div className="px-[20px] lg:px-[80px] text-white">
       <Header />
       <div className="flex flex-col lg:flex-row">
 
@@ -129,7 +129,7 @@ function LiderBoardCardList() {
 	]
 	return (
 		<>{cardList.map((user: User, index: number) =>
-				<div className="bg-gray-600 w-full h-12 rounded-lg mt-3 flex justify-between items-center px-4 font-['Helvetica']" key={index}>
+				<div className="bg-gray-600 w-full h-12 rounded-lg mt-3 flex justify-between items-center px-4 font-['Stolzl']" key={index}>
 					<div className="flex gap-2">
 						<p className={index <= 2 ? "text-[#BA9D5A]" : ''}>{index + 1}</p>
 						<p>{ user.username }</p>
@@ -140,4 +140,4 @@ function LiderBoardCardList() {
 	)
 }
 
-export default Profile;
+export default Stats;

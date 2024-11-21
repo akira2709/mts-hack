@@ -63,11 +63,14 @@ export const Profile = () => {
 const PriseSpin = () => {
 	const [el, setEl] = useState(0)
 	const prises = [
+		// {
+		// 	url: 'https://avatars.mds.yandex.net/i?id=8cda61e05245de6852b732a66c930a306e97c4ce-4556252-images-thumbs&n=13'
+		// },
+		// {
+		// 	url: 'https://avatars.mds.yandex.net/i?id=b293d54d58f65da280009032b7a99756ebe1deda-13239233-images-thumbs&n=13'
+		// },
 		{
-			url: 'https://avatars.mds.yandex.net/i?id=8cda61e05245de6852b732a66c930a306e97c4ce-4556252-images-thumbs&n=13'
-		},
-		{
-			url: 'https://avatars.mds.yandex.net/i?id=b293d54d58f65da280009032b7a99756ebe1deda-13239233-images-thumbs&n=13'
+			url: 'https://avatars.mds.yandex.net/i?id=f04def0913853e0865fe2f02db59041f38be8050-5109844-images-thumbs&n=13'
 		},
 		{
 			url: 'https://avatars.mds.yandex.net/i?id=f04def0913853e0865fe2f02db59041f38be8050-5109844-images-thumbs&n=13'

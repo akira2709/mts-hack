@@ -58,7 +58,7 @@ const Home = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-[#0a0b17] text-white px-[80px]">
+    <div className="min-h-screen bg-[#0a0b17] text-white px-[20px] md:px-[80px]">
       <Header currentUrl="main" />
 
       <main className="container mx-auto py-8">

@@ -1,4 +1,5 @@
 import './index.css';
+import "react-toastify/dist/ReactToastify.css";
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
@@ -7,6 +8,7 @@ import Home from "./pages/Home.tsx";
 import {Login} from "./pages/Login/Login.tsx";
 import GuessMovie from "./pages/GuessMovie.tsx";
 import { Profile } from './pages/profile/Profile.tsx';
+import {ToastContainer} from "react-toastify";
 
 
 const router = createBrowserRouter([
@@ -34,6 +36,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <ToastContainer/>
     <RouterProvider router={router} />
   </StrictMode>
 );

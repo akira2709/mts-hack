@@ -1,11 +1,11 @@
 import { useState } from "react"
 import styles from "./login.module.css"
 import AxiosInstance from "../../api/instance.ts";
+import {toast} from "react-toastify";
 
 export const Login = () => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
-  const [error, setError] = useState("")
 
   const onLogin = () => {
     AxiosInstance.post('/login', {
@@ -18,9 +18,10 @@ export const Login = () => {
         window.location.href = "/"
       })
       .catch(error => {
-        if (error.response) {
-          setError(error.response.data);
-        }
+        toast(error.response.data.error, {
+          position: "top-right",
+          autoClose: 5000
+        })
       })
   }
 
@@ -31,7 +32,6 @@ export const Login = () => {
           <img src="/img/kion-logo.svg" className={styles.logo} alt=''/>
           <h1 className={styles.title}>Войдите или зарегистрируйтесь</h1>
         </div>
-        {error && (<span>{error}</span>)}
         <div className={styles.inputBox}>
           <input type="text" className={styles.input} placeholder={"Введите свой ник..."} onChange={(e) => setUsername(e.target.value)} value={username}/>
           <button className={styles.button} onClick={() => setUsername("")}>

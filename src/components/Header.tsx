@@ -24,11 +24,6 @@ const Header = () => {
       .then(response => {
         setUser(response.data as UserBase);
       })
-      .catch(error => {
-        if (error.status === 401) {
-          console.log('error fetch')
-        }
-      });
   };
 
   useEffect(() => {

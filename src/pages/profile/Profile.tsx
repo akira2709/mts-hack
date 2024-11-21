@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom"
 import Header from "../../components/Header"
 import styles from "./index.module.css"
-import { Divide } from "lucide-react"
+import { useEffect, useState } from "react"
+import { toast } from "react-toastify"
 
 
 export const Profile = () => {
@@ -48,9 +49,38 @@ export const Profile = () => {
 }
 
 function PriseSpin() {
+	const [el, setEl] = useState(0)
+	const prises = [
+		{
+			url: 'https://avatars.mds.yandex.net/i?id=33ffa6fe15c1a3e09d85b493a04f7bf5efe6dc4d-8428027-images-thumbs&n=13'
+		},
+		{
+			url: 'https://avatars.mds.yandex.net/i?id=7bfe3c53578d92faafba5b92b3fb5704b14f6a58-10576312-images-thumbs&n=13'
+		},
+		{
+			url: 'https://avatars.mds.yandex.net/i?id=b74fac91b6da5ed22e1fa683648428f1d8964563-13201380-images-thumbs&n=13'
+		},
+		{
+			url: 'https://avatars.mds.yandex.net/i?id=1865fceb12351d29abe13a4f6906fa5a88dfa71d-10871820-images-thumbs&n=13'
+		},
+		{
+			url: 'https://avatars.mds.yandex.net/i?id=2c139aa26c0e8807ce7580cbb22e7ed2368cd0ad-9181326-images-thumbs&n=13'
+		},
+	]
+	useEffect(() => {
+		setInterval(() => {
+			setEl((el + 1) % prises.length)
+		}, 1000)
+	})
+	const handleClick = () => {
+
+	}
 	return (
 		<div className={styles.spin}>
-
+			<div className={styles.prises}>
+				<img src={prises[el].url} />
+			</div>
+			<button className={styles.button} onClick={() => handleClick()}>Получить приз</button>
 		</div>
 	)
 }

@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import Header from "../../components/Header"
 import styles from "./index.module.css"
-import { Divide } from "lucide-react"
 
 
 export const Profile = () => {

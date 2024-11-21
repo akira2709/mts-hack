@@ -1,9 +1,28 @@
 import { useState } from "react"
 import styles from "./login.module.css"
+import AxiosInstance from "../../api/instance.ts";
 
 export const Login = () => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+
+  const onLogin = () => {
+    AxiosInstance.post('/login', {
+      username: username,
+      password: password,
+    })
+      .then(response => {
+        const accessToken = response.data.token;
+        localStorage.setItem("token", accessToken);
+        window.location.href = "/"
+      })
+      .catch(error => {
+        if (error.response) {
+          setError(error.response.data);
+        }
+      })
+  }
 
   return (
     <div className={styles.bg}>
@@ -12,6 +31,7 @@ export const Login = () => {
           <img src="/img/kion-logo.svg" className={styles.logo} alt=''/>
           <h1 className={styles.title}>Войдите или зарегистрируйтесь</h1>
         </div>
+        {error && (<span>{error}</span>)}
         <div className={styles.inputBox}>
           <input type="text" className={styles.input} placeholder={"Введите свой ник..."} onChange={(e) => setUsername(e.target.value)} value={username}/>
           <button className={styles.button} onClick={() => setUsername("")}>
@@ -28,7 +48,7 @@ export const Login = () => {
             </svg>
           </button>
         </div>
-        <button className={styles.nextButton}>Далее</button>
+        <button className={styles.nextButton} onClick={onLogin}>Далее</button>
       </div>
     </div>
   )

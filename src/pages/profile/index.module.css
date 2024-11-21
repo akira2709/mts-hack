@@ -96,7 +96,7 @@
 
 .spin {
 	position: relative;
-	height: 432px;
+	height: 100%;
 	background: #112342;
 	border-radius: 20px;
 	width: 100%;
@@ -109,6 +109,8 @@
 	width: 100%;
 	img {
 		border-radius: 20px;
+		max-height: 300px;
+
 	}
 }
 
@@ -143,6 +145,9 @@
 	.content {
 		grid-template-columns: repeat(1, 1fr) !important;
 
+	}
+	.spin {
+		height: 500px;
 	}
 }
 @media (width <= 1000px) {

@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom"
 import Header from "../../components/Header"
 import styles from "./index.module.css"
 import { useEffect, useState } from "react"
-import { toast } from "react-toastify"
 
 
 export const Profile = () => {

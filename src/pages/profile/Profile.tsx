@@ -4,6 +4,7 @@ import styles from "./index.module.css"
 import { useEffect, useState } from "react"
 
 
+
 export const Profile = () => {
 	const navigate = useNavigate()
 	return (

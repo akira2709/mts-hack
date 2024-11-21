@@ -1,9 +1,29 @@
 import { useState } from "react"
 import styles from "./login.module.css"
+import AxiosInstance from "../../api/instance.ts";
+import {toast} from "react-toastify";
 
 export const Login = () => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+
+  const onLogin = () => {
+    AxiosInstance.post('/login', {
+      username: username,
+      password: password,
+    })
+      .then(response => {
+        const accessToken = response.data.token;
+        localStorage.setItem("token", accessToken);
+        window.location.href = "/"
+      })
+      .catch(error => {
+        toast(error.response.data.error, {
+          position: "top-right",
+          autoClose: 5000
+        })
+      })
+  }
 
   return (
     <div className={styles.bg}>
@@ -28,7 +48,7 @@ export const Login = () => {
             </svg>
           </button>
         </div>
-        <button className={styles.nextButton}>Далее</button>
+        <button className={styles.nextButton} onClick={onLogin}>Далее</button>
       </div>
     </div>
   )

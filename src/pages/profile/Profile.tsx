@@ -63,10 +63,13 @@ function PriseSpin() {
 	const [el, setEl] = useState(0)
 	const prises = [
 		{
-			url: 'https://avatars.mds.yandex.net/i?id=6ea7679fcdb777d5aa39f8ae12554f1b65dc9702390ada50-12179187-images-thumbs&n=13'
+			url: 'https://avatars.mds.yandex.net/i?id=8cda61e05245de6852b732a66c930a306e97c4ce-4556252-images-thumbs&n=13'
 		},
 		{
-			url: 'https://avatars.mds.yandex.net/i?id=d81c850771129145379f12bce11198d5af2bfe28-4612093-images-thumbs&n=13'
+			url: 'https://avatars.mds.yandex.net/i?id=b293d54d58f65da280009032b7a99756ebe1deda-13239233-images-thumbs&n=13'
+		},
+		{
+			url: 'https://avatars.mds.yandex.net/i?id=f04def0913853e0865fe2f02db59041f38be8050-5109844-images-thumbs&n=13'
 		},
 	]
 	useEffect(() => {

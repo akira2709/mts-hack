@@ -1,6 +1,7 @@
 import { atom } from "recoil"
+import {UserBase} from '../interfaces/user.ts'
 
-export const User = atom({
+export const UserState = atom<UserBase | null >({
 	key: "userState",
-	default: null
+	default: null,
 })

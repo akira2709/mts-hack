@@ -59,9 +59,9 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-[#0a0b17] text-white px-[80px]">
-      <Header />
+      <Header currentUrl="main" />
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto py-8">
         <section className="mb-12">
           <h2 className="text-2xl mb-6">Популярно сейчас:</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">

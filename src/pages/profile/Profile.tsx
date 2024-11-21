@@ -3,16 +3,28 @@ import Header from "../../components/Header"
 import styles from "./index.module.css"
 import { useEffect, useState } from "react"
 import { motion } from "motion/react"
+import {useRecoilState} from "recoil";
+import {UserState} from "../../api/user.ts";
+
 
 
 export const Profile = () => {
 	const navigate = useNavigate()
+
+	const [user, setUser] = useRecoilState(UserState);
+
+	const logout = () => {
+		localStorage.removeItem("token");
+		setUser(null);
+		return navigate("/");
+	}
+
 	return (
 		<div className={styles.main}>
-			<Header />
+			<Header currentUrl="profile" />
 			<div className={styles.content}>
 				<div className={styles.navBar}>
-					<p className={styles.username}>Иван Старобогов</p>
+					<p className={styles.username}>{user?.username}</p>
 					<div className={styles.block}>
 						<h1>Моё видео</h1>
 						<div className={styles.link}>
@@ -40,7 +52,7 @@ export const Profile = () => {
 							<p>Статистика</p>
 						</div>
 					</div>
-					<button className={styles.quit}>Выйти</button>
+					<button className={styles.quit} onClick={logout}>Выйти</button>
 				</div>
 				<PriseSpin />
 			</div>

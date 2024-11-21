@@ -9,6 +9,7 @@ import {Login} from "./pages/Login/Login.tsx";
 import GuessMovie from "./pages/GuessMovie.tsx";
 import { Profile } from './pages/profile/Profile.tsx';
 import {ToastContainer} from "react-toastify";
+import {RecoilRoot} from "recoil";
 
 
 const router = createBrowserRouter([
@@ -36,7 +37,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ToastContainer/>
-    <RouterProvider router={router} />
+    <RecoilRoot>
+      <ToastContainer/>
+      <RouterProvider router={router} />
+    </RecoilRoot>
   </StrictMode>
 );
